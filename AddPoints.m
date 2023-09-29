@@ -1,5 +1,7 @@
 function newpts = AddPoints(samples,nadd,fun,jac,lb,ub,rad)
 
+% Adds points around current sample
+
 pl = 1;
 
 ncells = size(samples,2);
