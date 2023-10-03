@@ -1,8 +1,17 @@
 function [Areas,Centroids,Moments,mind] =  VoronoiGeogram(pts,bbox,plotting)
-% input Voronoi points
-% points of bounding box
-% triangulation of bounding box
 
+% Prerequisite: https://github.com/BrunoLevy/geogram
+% Voronoi Diagrams are generated in VoronoiGeogram.m
+% Modify the path to the 'compute_RVD' routine, if needed. 
+%
+% inputs:
+% pts =  Voronoi points
+% bbox = A polygonal region
+% plotting = arbitrary input (random colors) or Nx3 array containing colors of the cells
+% 
+% Example:
+% bbox = [-1 -1; 1 -1; 1 1; -1 1];
+% VoronoiGeogram(2*rand(20,2)-1,bbox,1)
 
 
 N = size(pts,1);

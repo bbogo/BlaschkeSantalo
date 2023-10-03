@@ -1,11 +1,29 @@
-function final=  BSrunMat(N,d,nref)
+function final=  BlaschkeSantaloWeb(N,d,nref)
+
+% Computation of Blaschke Santalo diagram for the algebraic example
+% Prerequisite: https://github.com/BrunoLevy/geogram
+% Voronoi Diagrams are generated in VoronoiGeogram.m
+% Modify the path to the 'compute_RVD' routine, if needed. 
+% 
+% Inputs:
+% N = number of initial samples
+% d = dimension (2,3,4), higher costs more
+% nref = number of refinement (0,1,2,3... Do not exaggerate)
+%
+% Examples of usage:
+% BlaschkeSantaloWeb(100,2,1)
+% BlaschkeSantaloWeb(20,3,3)
+% BlaschkeSantaloWeb(50,4,2)
+
+
+
 setenv('LD_LIBRARY_PATH');
 if nargin<1
 	N = 10;
 end
 
 
-% dimension of the matrix problem
+% dimension for the matrix problem
 dim = d*(d+1)/2;
 
 % choose bounding box
@@ -27,7 +45,7 @@ end
 % Write Box in Mesh format for Geogram
 writeMesh(bbox);
 
-% Initialization
+% Initialization (random)
 samples = 2*rand(dim,N)-1;
 final.init = samples;
 final.bbox = bbox;

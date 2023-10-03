@@ -1,4 +1,23 @@
-function final=  BSrunAPW(N,dim,nref)
+function final=  RunAPWweb(N,dim,nref)
+
+% Computation of Blaschke Santalo diagram for the geometric example
+% Prerequisite: https://github.com/BrunoLevy/geogram
+% Voronoi Diagrams are generated in VoronoiGeogram.m
+% Modify the path to the 'compute_RVD' routine, if needed. 
+% 
+% Inputs:
+% N = number of initial samples
+% d = number of parameters (50 works fine)
+% nref = number of refinements (up to 3 the costs are reasonable)
+%
+% Examples of usage:
+% RunAPWweb(15,50,2)
+%
+% Don't start with many samples as the'll all concentrate around the origin.
+
+
+
+
 setenv('LD_LIBRARY_PATH');
 if nargin<1
 	N = 10;
