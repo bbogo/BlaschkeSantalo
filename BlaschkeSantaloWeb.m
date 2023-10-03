@@ -23,7 +23,7 @@ if nargin<1
 end
 
 
-% dimension for the matrix problem
+% dimension of the matrix problem
 dim = d*(d+1)/2;
 
 % choose bounding box
@@ -45,16 +45,26 @@ end
 % Write Box in Mesh format for Geogram
 writeMesh(bbox);
 
-% Initialization (random)
+% Initialization
 samples = 2*rand(dim,N)-1;
 final.init = samples;
 final.bbox = bbox;
 final.cells = {};
 pos = 1;
 
+str.samples = samples;
 % First run
-str = BSGeogramFmincon(samples,bbox);
 
+% Lloyd for a few iterations
+tic
+fprintf("Application of Lloyd for a few iterations.\n");
+str = LloydGeogram(str.samples,bbox,-1,1,20);
+toc
+pause
+% CVT
+tic
+str = BSGeogramFmincon(str.samples,bbox);
+toc
 fprintf("First optimization result.\n");
 pause
 
@@ -77,9 +87,17 @@ for i=1:nref
 	toc
 	pause
 	
-	% Run Lloyd or not
-	%str = LloydGeogram(res,bbox,-1,1,100,1);
-	str = BSGeogramFmincon(res,bbox);
+	% Lloyd for a few iterations
+	tic
+	fprintf("Run Lloyd a few iterations before CVT %d\n",i);
+	str = LloydGeogram(res,bbox,-1,1,20);
+	toc
+	pause
+	
+	% CVT
+	tic 
+	str = BSGeogramFmincon(str.samples,bbox);
+	toc
 	fprintf("Optimization after refinement number %d\n",i);
 	
 	final.cells{i+pos} = str.samples;
