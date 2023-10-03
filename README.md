@@ -1,5 +1,5 @@
 # BlaschkeSantalo
-Matlab Codes for generating Blaschke Santalo diagrams related to the paper:  [The numerical approximation of Blaschke-Santalo diagrams using Centroidal Voronoi Tessellations](https://hal.science/hal-03966754) by B. Bogosel, G. Buttazzo and E. Oudet. If you use the code in your work, please give credit by citing the paper and this Github repository.
+Matlab Codes for generating Blaschke Santalo diagrams related to the paper:  [The numerical approximation of Blaschke-Santalo diagrams using Centroidal Voronoi Tessellations](https://hal.science/hal-03966754) by [B. Bogosel](http://www.cmap.polytechnique.fr/~beniamin.bogosel/), [G. Buttazzo](https://people.dm.unipi.it/buttazzo/) and [E. Oudet](https://membres-ljk.imag.fr/Edouard.Oudet/). If you use the code in your work, please give credit by citing the paper and this Github repository.
 
 The library Geogram is needed to run the code. If possible, it should be compiled to use more than the default 6 digits of precision when writing to files. The file `mesh_io.cpp` needs to be modified accordingly. The Matlab routine `fmincon` is used, therefore the Matlab Optimization toolbox is required. 
 
