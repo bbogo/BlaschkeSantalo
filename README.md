@@ -3,8 +3,8 @@ Matlab Codes for generating Blaschke Santalo diagrams related to the paper:  [Th
 
 The library Geogram is needed to run the code. If possible, it should be compiled to use more than the default 6 digits of precision when writing to files. The file `mesh_io.cpp` needs to be modified accordingly. The Matlab routine `fmincon` is used, therefore the Matlab Optimization toolbox is required. 
 
-Make sure the correct path to the routine 'compute_RVD' is set in VoronoiGeogram.m
-
+Make sure the correct path to the routine `compute_RVD` is set in `VoronoiGeogram.m`. Make sure the Matlab path contains the folder and the contents of the subfolders `AlgebraicExample`, `GeometricExample`. For example run `addpath(genpath(pwd))` in the main folder. 
+`
 The main files of the toolbox are as follows:
 - `VoronoiGeogram.m`  computes a restricted Voronoi diagram. A set of points and a polygon are given as inputs.
 - `BlaschkeSantaloWeb.m` is used for the algebraic examples
