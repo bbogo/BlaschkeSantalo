@@ -11,3 +11,5 @@ The main files of the toolbox are as follows:
 - `RunAPWweb.m` is used for the geometric ones
 
 Check the corresponding files for typical examples of usage. Typing `help file_name` will give you the instructions for the three files listed above.
+
+The code is provided without any guarantee. Since the initialization is random, sometimes the Geogram library will not be able to compute the corresponding Voronoi diagram and the algorithm will crash. Simply restart the computation, it will work most of the time.
