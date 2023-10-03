@@ -13,7 +13,7 @@ function final=  RunAPWweb(N,dim,nref)
 % Examples of usage:
 % RunAPWweb(15,50,2)
 %
-% Don't start with many samples as the'll all concentrate around the origin.
+% Don't start with many samples as the images will all concentrate around the origin.
 
 
 
