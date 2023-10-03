@@ -4,7 +4,7 @@ function final=  RunAPWweb(N,dim,nref)
 % Prerequisite: https://github.com/BrunoLevy/geogram
 % Voronoi Diagrams are generated in VoronoiGeogram.m
 % Modify the path to the 'compute_RVD' routine, if needed. 
-% 
+%  
 % Inputs:
 % N = number of initial samples
 % d = number of parameters (50 works fine)

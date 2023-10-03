@@ -3,7 +3,7 @@ function final=  BlaschkeSantaloWeb(N,d,nref)
 % Computation of Blaschke Santalo diagram for the algebraic example
 % Prerequisite: https://github.com/BrunoLevy/geogram
 % Voronoi Diagrams are generated in VoronoiGeogram.m
-% Modify the path to the 'compute_RVD' routine, if needed. 
+% Modify the path to the 'compute_RVD' routine, if needed.  
 % 
 % Inputs:
 % N = number of initial samples

@@ -4,7 +4,7 @@ function [Areas,Centroids,Moments,mind] =  VoronoiGeogram(pts,bbox,plotting)
 % Voronoi Diagrams are generated in VoronoiGeogram.m
 % Modify the path to the 'compute_RVD' routine, if needed. 
 %
-% inputs:
+% inputs: 
 % pts =  Voronoi points
 % bbox = A polygonal region
 % plotting = arbitrary input (random colors) or Nx3 array containing colors of the cells
