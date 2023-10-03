@@ -10,4 +10,4 @@ The main files of the toolbox are as follows:
 - `BlaschkeSantaloWeb.m` is used for the algebraic examples
 - `RunAPWweb.m` is used for the geometric ones
 
-Check the corresponding files for typical examples of usage. 
+Check the corresponding files for typical examples of usage. Typing `help file_name` will give you the instructions for the three files listed above.
